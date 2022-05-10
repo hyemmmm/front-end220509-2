@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- input : form 안에 담을 데이터를 입력할 수 있는 태그 -->
+    <!-- inputPassword : 카멜 케이스 -->
+    <!-- input_password : 스네이크 케이스 -->
+    <form action="서버" method="get">
+      <ul>
+        <li>
+          <label>
+            아이디 :
+            <input
+              name="userID"
+              type="text"
+              autofocus
+              placeholder="아이디를 입력하세요"
+              required
+          /></label>
+          <label for="inputPassword">비밀번호</label>
+          <input
+            type="password"
+            placeholder="비밀번호(8글자 이상)"
+            id="inputPassword"
+          />
+        </li>
+        <li>이메일 : <input type="email" name="email" /></li>
+        <li>
+          <label>사과<input type="checkbox" value="apple" checked /></label>
+          <label>포도<input type="checkbox" value="grape" /></label>
+          <label>바나나<input type="checkbox" value="banana" /></label>
+          <label>오렌지<input type="checkbox" value="orange" /></label>
+        </li>
+        <li>
+          <label
+            >이메일 수신 여부 :
+            <input name="receiveEmail" type="radio" value="true" checked />수신
+            <input name="receiveEmail" type="radio" value="false" />미수신
+          </label>
+        </li>
+        <li>
+          <select name="fruit" id="">
+            <option value="apple">사과</option>
+            <option value="banana">바나나</option>
+            <option value="orange">오렌지</option>
+          </select>
+        </li>
+        <li>
+          <label>
+            자기소개
+            <textarea name="introduce" id="" cols="10" rows="28"></textarea>
+          </label>
+        </li>
+      </ul>
+      <button type="submit">제출</button>
+      <button type="reset">초기화</button>
+    </form>
+  </body>
+</html>

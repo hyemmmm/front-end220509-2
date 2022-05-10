@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  text-align: center;
+}
+div {
+  background-color: aquamarine;
+  width: 100px;
+  /* height: 100px; */
+  margin: 10px 0;
+  margin-bottom: 10px;
+  /* box-sizing: content-box; 기본값 */
+  box-sizing: border-box;
+  /* padding과 border 두께를 포함시켜 계산한다. */
+  display: inline-block;
+  padding: 10px;
+  border: solid 1px black;
+}
+span {
+  display: block;
+  background-color: tomato;
+  width: 100px;
+  height: 100px;
+}

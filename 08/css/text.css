@@ -1,0 +1,62 @@
+/* font-family : 글꼴을 지정 */
+html {
+  font-size: 14px;
+}
+.fontFamily {
+  font-family: "Black Han Sans", sans-serif;
+  font-style: oblique;
+}
+.fontSize {
+  font-size: 20px;
+}
+.fontSize h2 {
+  font-size: 2rem;
+  /* 
+   px : 화면의 픽셀 단위
+   em : 부모의 글자 사이즈에 대한 비율
+   rem : 문서의 글자 사이즈에 대한 비율
+  */
+}
+.fontSize p {
+  font-size: 28px;
+}
+.fontStyle h2 {
+  /*fontstyle : normal이 기본값 */
+  font-style: italic;
+}
+.fontStyle p {
+  font-style: oblique;
+}
+.color {
+  font-size: large;
+}
+.color h2 {
+  color: #8a4843;
+}
+.color p {
+  color: rgb(63, 99, 131);
+  font-weight: bold;
+}
+.textAlign {
+  text-align: justify;
+}
+.lineHeight {
+  font-size: 24px;
+}
+.lineHeight p {
+  height: 50px;
+  line-height: 1.5em;
+}
+.textDeco p {
+  text-decoration: underline;
+}
+.textTransform p {
+  text-transform: lowercase;
+}
+.textShadow h2 {
+  text-shadow: 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+.spacing p {
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+}

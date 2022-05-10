@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+/* p {
+  margin: 10px;
+} */
+.box {
+  height: 200px;
+  width: 200px;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  margin: 0 auto; /*가운데 정렬*/
+  border: 10px solid red;
+}
+
+strong {
+  /* 인라인 요소는 width, height 지정할 수 없다. */
+  /* width: 100px;
+  height: 100px; */
+  background-color: aqua;
+}
+#margin {
+  margin: 50px;
+}

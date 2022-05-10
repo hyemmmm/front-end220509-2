@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  text-align: center;
+}
+.box {
+  background-color: aqua;
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+}
+.second {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  /* border: 1px solid black; */
+}
+.new {
+  margin-top: 20px;
+}
+/* .first,
+.second {
+  border: 1px solid black;
+} */
