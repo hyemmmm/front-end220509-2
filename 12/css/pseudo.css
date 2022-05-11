@@ -1,0 +1,18 @@
+a {
+  display: inline-block;
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  /* height과 line-height 같은 값이면 세로 가운데 정렬 가능 */
+  overflow: hidden;
+  background-image: url(../../11/img/cms_temp_article_10111331889739.jpg);
+  background-size: contain;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+a:hover {
+  color: red;
+  background-size: 120%;
+  background-position: center;
+}

@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  text-align: center;
+  background-color: gray;
+  padding: 10px 0;
+}
+.nav {
+  display: inline-block;
+  /* border: 1px solid black; */
+}
+.nav li {
+  list-style: none;
+  float: left;
+  margin: 0 10px;
+  color: white;
+}
+a {
+  display: inline-block;
+  width: 80px;
+
+  text-decoration: none;
+  color: inherit;
+  padding: 10px;
+  border: 1px solid white;
+  border-radius: 10px;
+}

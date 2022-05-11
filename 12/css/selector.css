@@ -1,0 +1,9 @@
+.parent .son > p {
+  background-color: red;
+}
+.sibling h2 ~ p {
+  color: red;
+}
+input[type="password"] {
+  width: 500px;
+}

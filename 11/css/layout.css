@@ -1,0 +1,34 @@
+/* .container {
+  text-align: center;
+}
+.box {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  background-color: black;
+} */
+
+/* .clearFix {
+  clear: both;
+} */
+
+.container .imgBox {
+  float: left;
+}
+.container .box {
+  width: 200px;
+  height: 200px;
+  background-color: black;
+  float: left;
+}
+.container .redBox {
+  /* width: 100px; */
+  height: 100px;
+  background-color: red;
+}
+strong {
+  width: 100px;
+  height: 100px;
+  background-color: blueviolet;
+  float: left;
+}

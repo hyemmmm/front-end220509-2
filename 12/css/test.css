@@ -1,0 +1,10 @@
+.question h2 + p {
+  background-color: red;
+}
+.question h3 ~ p {
+  background-color: red;
+}
+.question h3 ~ p + div a[href="https://www.daum.net"]
+{
+  background-color: red;
+}

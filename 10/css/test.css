@@ -1,0 +1,28 @@
+body {
+  height: 1500px;
+}
+.box {
+  width: 80vw;
+  height: 20vh;
+  margin: 0 auto;
+  background-image: url(../images/cms_temp_article_10111331889739.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 300px;
+  /* margin-top: 600px; */
+  background-position: center;
+  /* contain : fixed되면 이미지 사이즈 원본 그대로 */
+  /* fixed에서도 cover는 영향 있음 */
+}
+.box2 {
+  width: 80vw;
+  height: 50vh;
+  margin: 0 auto;
+  /* background-image: url(../images/cms_temp_article_10111331889739.jpg); */
+  background-image: url(../images/CSS3_logo_and_wordmark.svg.png);
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+}
