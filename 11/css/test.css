@@ -3,14 +3,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+.clearFix {
+  clear: both;
+}
 .container {
   text-align: center;
   background-color: gray;
   padding: 10px 0;
 }
 .nav {
-  display: inline-block;
+  /* display: inline-block; */
   /* border: 1px solid black; */
+  width: 450px;
+  margin: 0 auto;
 }
 .nav li {
   list-style: none;
@@ -21,10 +26,37 @@
 a {
   display: inline-block;
   width: 80px;
-
   text-decoration: none;
   color: inherit;
   padding: 10px;
   border: 1px solid white;
   border-radius: 10px;
 }
+
+/* display가 inline이면 clear 불가능
+(inline은 원래 float에 감춰지지 않기 때문에) */
+
+.nav::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+/* float된 요소 바로 다음에 넣는 것이 제일 좋음(그 사이에 다른 것이 끼어 있으면 안되기 때문에 */
+
+ul li::before {
+  display: inline-block;
+  opacity: 0;
+  content: "";
+  /* content에 이미지도 삽입 가능 */
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: black;
+  margin-right: 5px;
+}
+
+ul li:hover::before {
+  display: inline-block;
+  opacity: 1;
+}
+/* opacity는 투명도만 조절돼서 클릭 가능 /visibility:hidden 은 아예 없어져서 이벤트 발생하지 않음 */

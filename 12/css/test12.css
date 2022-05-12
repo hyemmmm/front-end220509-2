@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.container {
+  background-color: gray;
+  text-align: center;
+  font-size: 0;
+  /* 틈 생길때 써보기 */
+}
+.container .menu {
+  background-color: black;
+  display: inline-block;
+  /* width: 350px;
+  margin: 0 auto; */
+  /* border: 1px solid yellow; */
+}
+li {
+  float: left;
+  list-style: none;
+  /* border: 1px solid white; */
+}
+li a:hover {
+  background-color: aqua;
+}
+.clearFix {
+  clear: both;
+}
+li a {
+  display: inline-block;
+  width: 200px;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 28px;
+}
+h1 {
+  margin: 50px;
+  text-align: center;
+  font-size: 28px;
+}
+.container2 {
+  /* border: 1px solid black; */
+  width: 900px;
+  margin: 0 auto;
+}
+.container2 div {
+  width: 280px;
+  height: 300px;
+  float: left;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.container2 div:hover {
+  background-size: 130%;
+}
+.container2 div:nth-child(1) {
+  background-image: url(/12/img/1.jpg);
+}
+.container2 div:nth-child(2) {
+  background-image: url(/12/img/2.jpg);
+  margin: 0 28px;
+}
+.container2 div:nth-child(3) {
+  background-image: url(/12/img/3.jpg);
+}
+
+.container3 {
+  /* border: 1px solid black; */
+  margin: 1000px 0 0 0;
+}
+.container3 div {
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.container3 div:nth-child(1) {
+  background-image: url(/12/img/4.jpg);
+  background-position: center;
+}
+.container3 div:nth-child(2) {
+  background-image: url(/12/img/5.jpg);
+  background-position: left;
+}
+.container3 div:nth-child(3) {
+  background-image: url(/12/img/6.jpg);
+  background-position: right;
+  margin: 0;
+}
