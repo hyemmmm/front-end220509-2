@@ -1,29 +1,23 @@
-body {
-  height: 1000px;
-}
 .container {
-  /* width: 1000px; */
-  height: 500px;
-  background-color: rgba(0, 0, 0, 0.4);
+  width: 1000px;
+  height: 1000px;
+  background-color: #bbb;
+  /* 16진수 : 0~f 0123456789abcdef */
   position: relative;
 }
-.smallBox {
-  width: 200px;
-  height: 50px;
-  background-color: aliceblue;
-  position: fixed;
-  /* z-index: -1; */
-  top: 50%;
-  right: 10px;
+.inner {
+  width: 500px;
+  height: 300px;
+  background-color: #999;
+  /* position: relative; */
 }
 .box {
-  width: 200px;
-  height: 200px;
-  background-color: aquamarine;
-  /* position: relative; */
-  /* 문서 흐름상 원래 있어야할 자리를 기준으로 움직임 */
-  /* position: absolute; */
-  /* 상위 요소 중에 position 값을 지정한 요소를 기준으로 움직인다. => static(기본값)가 아닌 요소 */
-  /* position: fixed; */
-  margin: 0 auto;
+  /* position: static; 기본값. 문서의 원래 흐름에 위치. 이동하지 않음. */
+  /* position: relative; static과 같이 원래 흐름에 위치. 이동 가능*/
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  background-color: #777;
+  /* top: 100px; */
+  bottom: 0;
 }

@@ -3,6 +3,7 @@
 }
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* overflow: hidden; */
 }
 .container {
   background-color: gray;
@@ -12,10 +13,8 @@ body {
 }
 .container .menu {
   background-color: black;
-  display: inline-block;
-  /* width: 350px;
-  margin: 0 auto; */
-  /* border: 1px solid yellow; */
+  display: flex;
+  justify-content: center;
 }
 li {
   float: left;
@@ -23,7 +22,8 @@ li {
   /* border: 1px solid white; */
 }
 li a:hover {
-  background-color: aqua;
+  background-color: gray;
+  color: brown;
 }
 .clearFix {
   clear: both;
@@ -36,6 +36,7 @@ li a {
   color: white;
   font-weight: bold;
   font-size: 28px;
+  transition: 0.5s ease-in background-color;
 }
 h1 {
   margin: 50px;
@@ -46,14 +47,16 @@ h1 {
   /* border: 1px solid black; */
   width: 900px;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }
 .container2 div {
   width: 280px;
   height: 300px;
-  float: left;
   background-position: center;
-  background-size: cover;
+  background-size: 100%; /*transition 적용되려면 같은 수치로*/
   background-repeat: no-repeat;
+  transition-duration: 1s;
 }
 .container2 div:hover {
   background-size: 130%;
@@ -63,7 +66,6 @@ h1 {
 }
 .container2 div:nth-child(2) {
   background-image: url(/12/img/2.jpg);
-  margin: 0 28px;
 }
 .container2 div:nth-child(3) {
   background-image: url(/12/img/3.jpg);
@@ -91,4 +93,76 @@ h1 {
   background-image: url(/12/img/6.jpg);
   background-position: right;
   margin: 0;
+}
+.box {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 112px;
+  transition: 1s;
+}
+.box2 {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 112px;
+  opacity: 0;
+}
+a:hover .box {
+  opacity: 0;
+}
+a:hover .box2 {
+  opacity: 1;
+}
+.background {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.pop {
+  position: absolute;
+  width: 800px;
+  height: 280px;
+  background-color: aliceblue;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  /* padding: 28px; */
+  border-radius: 28px;
+  border: 1px solid black;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+.pop h2 {
+  border-bottom: 1px solid black;
+  padding: 28px;
+}
+.pop p {
+  padding: 28px;
+  text-align: justify;
+}
+svg {
+  position: absolute;
+  left: 0;
+  animation-name: wave;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  opacity: 0.28;
+}
+.pop svg:nth-child(3) {
+  animation-direction: alternate-reverse;
+}
+
+@keyframes wave {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-800px);
+  }
 }

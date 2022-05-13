@@ -1,0 +1,30 @@
+.container {
+  width: 500px;
+  height: 300px;
+  background-color: #999;
+  margin: 100px auto 0;
+}
+.box {
+  width: 50px;
+  height: 50px;
+  background-color: #777;
+  animation-name: moveRight;
+  animation-duration: 2s;
+  /* animation-delay: 1s; */
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  position: relative;
+}
+
+@keyframes moveRight {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
