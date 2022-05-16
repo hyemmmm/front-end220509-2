@@ -1,0 +1,270 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+header {
+  background-color: black;
+  padding: 28px;
+  display: flex;
+  justify-content: space-between;
+}
+.left,
+.right {
+  display: flex;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+header a {
+  /* border: 1px solid white; */
+  color: white;
+  margin: 14px;
+}
+header a:hover {
+  color: rgb(160, 157, 157);
+}
+header a:hover svg {
+  fill: rgb(160, 157, 157);
+}
+header a:hover span {
+  border-color: rgb(160, 157, 157);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+.search {
+  border: 1px solid gray;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  margin: 0 7px;
+  background-color: black;
+}
+header input {
+  background-color: black;
+  width: 280px;
+  height: 28px;
+  border: none;
+  color: white;
+  transition: 0.28s ease-in;
+}
+header input:focus {
+  width: 420px;
+  outline: none;
+  background-color: rgb(160, 157, 157);
+  color: black;
+  transition-delay: 0s;
+}
+
+header input:active .search {
+  background-color: rgb(160, 157, 157);
+}
+header input:focus + svg {
+  opacity: 0;
+  transition-delay: 0s;
+}
+.search svg {
+  transition-delay: 0.28s;
+}
+svg {
+  fill: white;
+}
+.right span {
+  border: 4px solid white;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  margin: 5px;
+  position: relative;
+  top: 3px;
+}
+.right a {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.right img {
+  border-radius: 50%;
+}
+
+.right a:nth-child(3)::after {
+  color: white;
+  display: block;
+  content: "";
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: blue;
+  position: absolute;
+  left: 12px;
+  bottom: 12px;
+  border: 3px solid black;
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  height: 90vh;
+}
+.main-main {
+  flex: 3;
+}
+.aside {
+  flex: 1;
+  /* flex-basis: 350px; */
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid gray;
+  width: 350px;
+}
+.aside a {
+  color: inherit;
+}
+.box1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+.box1 a {
+  background-color: green;
+  color: white;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  padding: 7px 14px;
+}
+.box1 a:hover {
+  background-color: rgb(3, 102, 3);
+}
+.box2 {
+  display: block;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+.box2 input {
+  width: 100%;
+  background-color: aliceblue;
+  border-radius: 28px;
+  border: 1px solid gray;
+  padding: 7px;
+  padding-left: 14px;
+  margin: 14px 0 28px;
+}
+.box2 input:focus {
+  background-color: white;
+  outline-color: blue;
+}
+.box2 img {
+  border-radius: 50%;
+}
+.box2 div {
+  padding: 5px 0;
+}
+.box2 a:hover {
+  text-decoration: underline;
+}
+.box3 {
+  padding-top: 10px;
+}
+.box3 h3 {
+  margin: 10px 0;
+}
+.main-main {
+  display: flex;
+  padding-right: 100px;
+  background-color: aliceblue;
+}
+.middle,
+.rightAside {
+  border: 1px solid black;
+}
+.middle {
+  flex: 2;
+  padding: 28px;
+}
+.middle:nth-child(1) {
+  border: 1px solid gray;
+}
+.rightAside {
+  flex: 1;
+  padding: 28px;
+}
+.main-nav {
+  border-bottom: 1px solid gray;
+}
+.main-nav button {
+  margin-right: 14px;
+  padding: 7px;
+  border: 1px solid transparent;
+  background-color: transparent;
+  position: relative;
+  margin-bottom: 10px;
+}
+.main-nav button:hover {
+  background-color: gainsboro;
+  cursor: pointer;
+  border-radius: 14px;
+}
+.main-nav #beta {
+  color: green;
+  border: 1px solid green;
+  border-radius: 14px;
+  padding: 4px;
+  font-size: 0.8em;
+}
+.main-nav button::after {
+  position: absolute;
+  bottom: -12px;
+  left: -1px;
+  width: 100%;
+  height: 2px;
+  content: "";
+  background-color: orange;
+}
+.introduce {
+  background-color: white;
+  border: 1px solid gray;
+  border-radius: 14px;
+  margin: 28px 0;
+  padding: 14px;
+}
+.introduceBox {
+  border: 1px solid gray;
+  border-radius: 14px;
+  margin: 14px 0;
+}
+.introduceHeader {
+  border-bottom: 1px solid gray;
+  padding: 14px;
+}
+.introduceArticle {
+  padding: 14px;
+  background-color: aliceblue;
+  border-bottom-left-radius: 14px;
+  border-bottom-right-radius: 14px;
+  list-style-position: inside;
+}
+.introduceButtons {
+  text-align: right;
+}
+.introduceButtons a:nth-child(1) {
+  color: blue;
+}
+.introduceButtons a:nth-child(2) {
+  background-color: green;
+  color: white;
+  border-radius: 14px;
+  align-items: center;
+  padding: 7px 14px;
+  margin-left: 14px;
+}
+.introduceButtons a:nth-child(1):hover {
+  text-decoration: underline;
+}
+.introduceButtons a:nth-child(2):hover {
+  background-color: rgb(3, 102, 3);
+}
