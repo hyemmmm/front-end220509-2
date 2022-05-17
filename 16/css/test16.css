@@ -3,22 +3,31 @@
   padding: 0;
   box-sizing: border-box;
 }
+.gridWrapper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "aside main right"
+    "aside main right";
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 header {
   background-color: black;
-  padding: 28px;
+  padding: 14px 28px;
   display: flex;
   justify-content: space-between;
+  grid-area: header;
 }
 .left,
 .right {
   display: flex;
   align-items: center;
 }
-a {
-  text-decoration: none;
-}
 header a {
-  /* border: 1px solid white; */
   color: white;
   margin: 14px;
 }
@@ -51,6 +60,9 @@ header input {
   color: white;
   transition: 0.28s ease-in;
 }
+header input::placeholder {
+  color: white;
+}
 header input:focus {
   width: 420px;
   outline: none;
@@ -58,7 +70,9 @@ header input:focus {
   color: black;
   transition-delay: 0s;
 }
-
+header input:focus::placeholder {
+  color: gray;
+}
 header input:active .search {
   background-color: rgb(160, 157, 157);
 }
@@ -89,7 +103,6 @@ svg {
 .right img {
   border-radius: 50%;
 }
-
 .right a:nth-child(3)::after {
   color: white;
   display: block;
@@ -104,24 +117,12 @@ svg {
   border: 3px solid black;
   box-sizing: border-box;
 }
-.main {
-  display: flex;
-  height: 90vh;
-}
-.main-main {
-  flex: 3;
-}
 .aside {
-  flex: 1;
-  /* flex-basis: 350px; */
   padding: 28px;
   display: flex;
   flex-direction: column;
   border-right: 1px solid gray;
-  width: 350px;
-}
-.aside a {
-  color: inherit;
+  grid-area: aside;
 }
 .box1 {
   display: flex;
@@ -173,25 +174,11 @@ svg {
 .box3 h3 {
   margin: 10px 0;
 }
-.main-main {
-  display: flex;
-  padding-right: 100px;
-  background-color: aliceblue;
-}
-.middle,
-.rightAside {
-  border: 1px solid black;
-}
 .middle {
-  flex: 2;
   padding: 28px;
-}
-.middle:nth-child(1) {
-  border: 1px solid gray;
-}
-.rightAside {
-  flex: 1;
-  padding: 28px;
+  grid-area: main;
+  background-color: aliceblue;
+  height: 100vh;
 }
 .main-nav {
   border-bottom: 1px solid gray;
@@ -216,14 +203,15 @@ svg {
   padding: 4px;
   font-size: 0.8em;
 }
-.main-nav button::after {
+.main-nav button.active::after {
   position: absolute;
   bottom: -12px;
-  left: -1px;
-  width: 100%;
+  left: -2px;
+  width: 102%;
   height: 2px;
   content: "";
   background-color: orange;
+  border-radius: 1px;
 }
 .introduce {
   background-color: white;
@@ -236,6 +224,7 @@ svg {
   border: 1px solid gray;
   border-radius: 14px;
   margin: 14px 0;
+  font-size: small;
 }
 .introduceHeader {
   border-bottom: 1px solid gray;
@@ -267,4 +256,130 @@ svg {
 }
 .introduceButtons a:nth-child(2):hover {
   background-color: rgb(3, 102, 3);
+}
+.discover {
+  border: 1px solid gray;
+  border-radius: 14px;
+  margin: 14px 0;
+  background-color: white;
+  padding: 28px;
+}
+.discover h2 {
+  padding: 14px 0;
+}
+.discover p a,
+.ProTip p:nth-child(1) a {
+  color: blue;
+}
+.discover p a:hover,
+.ProTip p:nth-child(1) a:hover {
+  text-decoration: underline;
+}
+.discover p + a {
+  border-radius: 14px;
+  padding: 7px 14px;
+  background-color: aliceblue;
+  color: blue;
+  display: inline-block;
+  margin-top: 28px;
+}
+.discover p + a:hover {
+  background-color: blue;
+  color: aliceblue;
+}
+.footer {
+  font-size: small;
+  border-bottom: 1px solid gray;
+}
+.ProTip svg {
+  fill: gray;
+}
+.ProTip p:nth-child(1) {
+  margin-bottom: 7px;
+}
+.ProTip p:nth-child(2) a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.ProTip p:nth-child(2) a:hover svg {
+  fill: blue;
+}
+.footerMenu {
+  margin: 28px 0 14px;
+  display: flex;
+  justify-content: space-between;
+}
+.footerMenu .license {
+  flex: 1;
+  width: 300px;
+  /* border: 1px solid black; */
+}
+.footerMenu .license a {
+  display: flex;
+  align-items: center;
+}
+.footerMenu svg {
+  fill: gray;
+  margin-right: 7px;
+}
+.footerMenu a:hover svg {
+  fill: rgb(80, 79, 79);
+}
+.footerMenu .menu {
+  display: flex;
+  flex: 2;
+  height: 100px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  /* border: 1px solid black; */
+}
+.footerMenu .menu a {
+  margin-right: 28px;
+  width: 128px;
+  /* border: 1px solid black; */
+}
+.footerMenu .menu a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.rightAside {
+  padding: 28px;
+  grid-area: right;
+  background-color: aliceblue;
+  padding-right: 160px;
+}
+.rightAside h3 {
+  margin-bottom: 14px;
+}
+.rightAside ul li {
+  font-size: small;
+  color: gray;
+  position: relative;
+  margin-bottom: 14px;
+}
+.rightAside ul li:before {
+  display: inline-block;
+  content: "";
+  width: 1px;
+  height: 156%;
+  background-color: gray;
+  position: absolute;
+  left: -14px;
+  top: 7px;
+}
+.rightAside ul li a {
+  display: block;
+  color: black;
+  font-size: 14px;
+}
+.rightAside ul li a:hover {
+  color: blue;
+  text-decoration: underline;
+}
+.rightAside ul + a:last-child {
+  color: gray;
+  font-size: small;
+}
+.rightAside ul + a:last-child:hover {
+  color: blue;
 }

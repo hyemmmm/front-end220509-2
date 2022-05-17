@@ -1,0 +1,18 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  background-color: #bbb;
+  width: auto;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+}
+.box:nth-child(odd) {
+  background-color: aquamarine;
+}
+.box:nth-child(even) {
+  background-color: tomato;
+}

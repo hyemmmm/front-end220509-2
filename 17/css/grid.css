@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 1000px;
+  height: 500px;
+  background-color: #ccc;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(50px, auto));
+  grid-template-columns: repeat(auto-fit, 300px);
+  grid-template-areas:
+    "header header header"
+    "aside main main"
+    "aside main main";
+}
+.box {
+  background-color: red;
+  /* width: 50px; */
+  /* height: 50px; */
+}
+.box:nth-child(even) {
+  background-color: orange;
+}
+.box:nth-child(1) {
+  /* grid-column: span 3; */
+  /* grid-area: header; */
+}
+.box:nth-child(2) {
+  /* grid-row: span 2; */
+  /* grid-area: aside; */
+}
+.box:nth-child(3) {
+  /* grid-row-start: 2;
+  grid-row-end: 4;
+  grid-column-start: 2;
+  grid-column-end: 4; */
+  background-color: yellow;
+  /* grid-row: span 2;
+  grid-column: span 2; */
+  /* grid-area: main; */
+}
+.container2 {
+  width: 400px;
+  height: 400px;
+  background-color: gray;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "A B B"
+    "A C C"
+    "A C C";
+}
+.Box {
+  width: 50px;
+  height: 50px;
+}
+.container2 .Box:nth-child(1) {
+  background-color: red;
+  grid-area: A;
+  justify-self: flex-end;
+  align-self: center;
+}
+.container2 .Box:nth-child(2) {
+  background-color: blue;
+  grid-area: B;
+  height: auto;
+  align-self: stretch;
+  justify-self: center;
+}
+.container2 .Box:nth-child(3) {
+  background-color: black;
+  grid-area: C;
+  justify-self: center;
+  align-self: center;
+}
