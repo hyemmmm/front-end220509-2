@@ -15,19 +15,19 @@ a {
   text-decoration: none;
   color: inherit;
 }
-header {
+.gridWrapper header {
   background-color: black;
   padding: 14px 28px;
   display: flex;
   justify-content: space-between;
   grid-area: header;
 }
-.left,
-.right {
+.gridWrapper header .left,
+.gridWrapper header .right {
   display: flex;
   align-items: center;
 }
-header a {
+.gridWrapper header a {
   color: white;
   margin: 14px;
 }
@@ -376,10 +376,10 @@ svg {
   color: blue;
   text-decoration: underline;
 }
-.rightAside ul + a:last-child {
+.rightAside > a {
   color: gray;
   font-size: small;
 }
-.rightAside ul + a:last-child:hover {
+.rightAside > a:hover {
   color: blue;
 }

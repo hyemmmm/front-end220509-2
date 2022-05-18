@@ -1,0 +1,27 @@
+@media all and (max-width: 500px) {
+  .container .menu {
+    flex-direction: column;
+    height: 50px;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  .container .menu:hover {
+    height: auto;
+    overflow: visible;
+  }
+  header ul li a {
+    width: 100vw;
+  }
+  .container2 {
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
+  .container3 {
+    margin-top: 50vh;
+  }
+  .menuDesign {
+    display: block;
+  }
+}
+/* 원래 css랑 선택자 똑같이 맞추기 */
