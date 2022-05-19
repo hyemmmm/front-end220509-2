@@ -84,3 +84,19 @@ num2 = num1;
 num1 = temp;
 
 console.log(num1, num2);
+
+//let, const
+//1. let
+//재선언을 허용하지 않는다. => 같은 이름으로 선언하는 것 불가능
+//변수 호이스팅 발생X
+
+// console.log(Str02);
+let str02 = "hyem";
+
+//2. const
+// 상수 : 변하지 않는 수 => 재선언X 재할당X
+// 호이스팅 발생 X
+
+// console.log(country);
+const country = "korea";
+// country = "japan";

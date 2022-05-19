@@ -7,7 +7,7 @@
   }
   .container .menu:hover {
     height: auto;
-    overflow: visible;
+    /* overflow: visible; */
   }
   header ul li a {
     width: 100vw;
@@ -22,6 +22,9 @@
   }
   .menuDesign {
     display: block;
+  }
+  .event {
+    height: auto;
   }
 }
 /* 원래 css랑 선택자 똑같이 맞추기 */
