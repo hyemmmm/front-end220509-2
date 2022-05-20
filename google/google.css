@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.all {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  grid-template-rows: 1fr 25fr 2fr;
+}
+svg {
+  width: 24px;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-area: header;
+}
+header .leftHeader ul,
+header .rightHeader ul {
+  display: flex;
+  padding: 14px 28px;
+  align-items: center;
+}
+header .leftHeader ul li:nth-child(1),
+header .rightHeader ul li {
+  margin-right: 14px;
+}
+header .rightHeader {
+  display: flex;
+}
+header .rightHeader ul li:last-child a {
+  background-color: #1a73e8;
+  padding: 7px 14px;
+  color: white;
+  border-radius: 14px;
+}
+.rightHeader li:nth-child(3) a {
+  /* border: 1px solid black; */
+  display: flex;
+  border-radius: 50%;
+  padding: 7px;
+}
+main {
+  grid-area: main;
+  padding: 54px 28px;
+  padding-bottom: 280px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main .logo {
+  text-align: center;
+}
+main .searchBox {
+  border: 1px solid gray;
+  border-radius: 28px;
+  width: 582px;
+  height: 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  margin: 28px 0;
+}
+main .searchBox a {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid black; */
+  padding: 0 7px;
+}
+main .searchBox a:last-child {
+  margin-right: 7px;
+}
+main .searchBox > svg {
+  fill: gray;
+  margin: 0 14px;
+}
+main .searchBox input {
+  border-color: transparent;
+  width: 447px;
+  height: 34px;
+}
+main .searchBox input:focus {
+  outline: none;
+}
+main .buttonBox a {
+  background-color: #f8f9fa;
+  padding: 14px 28px;
+  border-radius: 14px;
+  margin: 0 7px;
+}
+footer {
+  grid-area: footer;
+  background-color: #f8f9fa;
+  color: gray;
+}
+.footerA {
+  border-bottom: 1px solid #dadce0;
+  padding: 14px 28px;
+}
+.footerB {
+  display: flex;
+  justify-content: space-around;
+  padding: 14px 0;
+  font-size: small;
+}
+.footerB a {
+  margin: 0 28px;
+}
+header a:hover,
+footer a:hover {
+  text-decoration: underline;
+}
+.rightHeader li:nth-child(3) a:hover {
+  background-color: rgba(128, 128, 128, 0.733);
+}
+.rightHeader li:nth-child(4) a:hover {
+  text-decoration: none;
+  box-shadow: 0 1px 2px 0 rgb(66 133 244 / 30%);
+}
+.searchBox:hover {
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+}
+.buttonBox a:hover {
+  box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
+}
