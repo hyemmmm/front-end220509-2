@@ -7,3 +7,12 @@ menuButton.onclick = function () {
     menuButton.classList.add("event");
   }
 };
+
+let popButton = document.querySelector(".close");
+let popup = document.querySelector(".background");
+popButton.onclick = function () {
+  popup.classList.add("none");
+  document.body.style.overflow = "auto";
+};
+
+//.addEventListener('click', () => {})
