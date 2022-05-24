@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(230, 230, 230);
+  box-sizing: border-box;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: inherit;
+}
+body {
+  display: gird;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
+  grid-template-rows: 1fr 20fr 5fr;
+}
+header {
+  grid-area: header;
+  background-color: black;
+  color: white;
+  font-style: italic;
+  font-size: 32px;
+  font-weight: 700;
+  padding: 14px 0 14px 300px;
+}
+main {
+  grid-area: main;
+  padding: 56px 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+main > div {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 1115px;
+  padding: 90px 112px;
+}
+main div div {
+  background-color: inherit;
+}
+main div div form {
+  background-color: inherit;
+}
+main div div form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main div div form h2 {
+  background-color: inherit;
+  margin: 14px 0;
+}
+main div div form p {
+  background-color: inherit;
+  margin-bottom: 28px;
+}
+main div div form input {
+  display: block;
+  background-color: inherit;
+  border: 1px solid #ccc;
+  width: 353px;
+  height: 43px;
+  margin: 7px 0;
+  padding: 7px;
+}
+main div div form button {
+  width: 353px;
+  height: 46px;
+  background-color: black;
+  color: white;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: large;
+  margin-top: 28px;
+}
+main div div form button:hover {
+  cursor: pointer;
+}
+main div div div {
+  padding: 28px 0;
+  font-weight: bold;
+}
+main div div div a {
+  padding: 0 14px;
+  border-right: 1px solid #ccc;
+}
+main div div div a:hover {
+  color: #ccc;
+}
+main div div div a:last-child {
+  border-right: none;
+}
+main div .welcome p,
+img {
+  background-color: inherit;
+}
+main div .welcome p {
+  margin: 28px;
+  font-size: large;
+}
+footer {
+  grid-area: footer;
+}
+footer > div:nth-child(1) {
+  border: 1px solid #ccc;
+  border-left: none;
+  border-right: none;
+  padding-left: 280px;
+}
+footer > div:nth-child(1) a {
+  display: inline-block;
+  margin: 14px 28px;
+  color: rgb(94, 94, 94);
+  font-weight: bold;
+}
+footer > div:nth-child(2) {
+  display: flex;
+  padding-left: 280px;
+  font-size: small;
+}
+footer > div:nth-child(2) div:nth-child(1) {
+  flex: 2;
+}
+footer > div:nth-child(2) div:nth-child(2) {
+  flex: 1;
+}
+footer > div:nth-child(2) img {
+  float: left;
+  margin: 80px 28px;
+}
+footer > div:nth-child(2) .footerBaseA {
+  margin-top: 56px;
+  margin-bottom: 28px;
+}
+footer #contact {
+  border-left: 1px solid #ccc;
+  margin: 56px 0;
+  padding-left: 28px;
+}
+footer #contact h3 {
+  margin-bottom: 28px;
+}
+footer #contact div {
+  display: flex;
+}
+footer #contact div ul:nth-child(1) {
+  font-weight: bold;
+  margin-bottom: 28px;
+  margin-right: 28px;
+}
+footer #contact div ul li {
+  margin-bottom: 7px;
+}
+/**/
+.form .successText {
+  text-align: center;
+  display: none;
+}

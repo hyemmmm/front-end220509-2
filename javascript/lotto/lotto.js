@@ -27,3 +27,34 @@ let result = selectedNum.reduce((a, b) => {
   return a + b;
 }, 0);
 console.log(result);
+
+//배열함수로 id:3인 아이템 빼고 남기기
+let arr = [
+  { id: 1, text: "html" },
+  { id: 2, text: "css" },
+  { id: 3, text: "javascript" },
+  { id: 4, text: "react" },
+];
+
+let resultArr = arr.filter((item) => item.id !== 3);
+console.log(resultArr);
+// filter 함수는 return 값이 true인 값만 모아서 배열로 반환 => return boolean값이여야만 한다.
+//화살표 함수는 {}(코드블록) 생략 시 바로 값을 return
+
+//2번째 방법
+// for (let i = 0; i < arr.length; i++) {
+//   if (arr[i].id === 2) {
+//     arr.splice(i, 1);
+//   }
+// }
+// console.log(arr);
+
+const sum = (a, b) => a + b;
+console.log(sum(1, 2));
+
+//원시값 => 숫자, 문자, 불리언 등 변하지 않는 값
+//참조값 => 값을 참조하는 주소가 변경
+let obj = { name: "hyemin" };
+let copyObj = obj;
+copyObj.name = "hyemin kim";
+console.log(obj, copyObj);
