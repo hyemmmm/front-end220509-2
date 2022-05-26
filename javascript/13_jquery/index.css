@@ -1,0 +1,68 @@
+.container {
+  width: 1000px;
+  height: 500px;
+  margin: 100px 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: aliceblue;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+}
+.box.blue {
+  background-color: blue;
+}
+.box:nth-child(2) {
+  margin: 0 10px;
+}
+li {
+  cursor: pointer;
+}
+li.red {
+  color: red;
+}
+.card .front,
+.back {
+  width: 280px;
+  height: 280px;
+  position: absolute;
+  top: 0;
+}
+.card {
+  position: relative;
+  perspective: 1000px;
+  margin: 28px;
+}
+.B {
+  left: 300px;
+}
+.C {
+  left: 600px;
+}
+.D {
+  top: 300px;
+}
+.E {
+  top: 300px;
+  left: 300px;
+}
+.F {
+  top: 300px;
+  left: 600px;
+}
+.card .front {
+  background-color: red;
+  z-index: 2;
+  backface-visibility: hidden;
+}
+.card .back {
+  background-color: orange;
+  z-index: 1;
+}
+.rotate {
+  transform: rotateY(180deg);
+  transition: 1s;
+}

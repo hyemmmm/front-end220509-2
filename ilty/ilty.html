@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./ilty.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./ilty.js" defer></script>
     <title>심리상담센터 당신을 듣다</title>
   </head>
   <body>
@@ -39,10 +45,41 @@
               <li><a href=""> 상담 치료</a></li>
             </ul>
           </li>
-          <li><a href=""> 심리검사</a></li>
-          <li><a href="">기업상담</a></li>
-          <li><a href=""> 자가진단</a></li>
-          <li><a href=""> 고객센터</a></li>
+          <li><a href=""> 심리검사</a>
+            <ul class="depth">
+              <li><a href="">종합심리검사</a></li>
+              <li><a href=""> 성격검사</a></li>
+              <li><a href="">지능검사</a></li>
+              <li><a href=""> 진로/적성검사</a></li>
+              
+            </ul>
+          </li>
+          <li><a href="">기업상담</a>
+            <ul class="depth">
+              <li><a href="">근로자 지원프로그램(EAP)</a></li>
+            </ul>
+          </li>
+          <li><a href=""> 자가진단</a>
+            <ul class="depth">
+              <li><a href="">ADHD</a></li>
+              <li><a href="">벡 우울척도(BDI)</a></li>
+              <li><a href="">불안장애</a></li>
+              <li><a href="">자살생각</a></li>
+              <li><a href="">니코틴 의존</a></li>
+              <li><a href="">스마트폰 중독</a></li>
+              <li><a href="">스트레스 유형</a></li>
+              <li><a href="">인터넷 게임중독</a></li>
+            </ul>
+          </li>
+          <li><a href=""> 고객센터</a>
+            <ul class="depth">
+              <li><a href="">공지사항</a></li>
+              <li><a href="">이야기방</a></li>
+              <li><a href="">FAQ</a></li>
+              <li><a href="">상담문의</a></li>
+              <li><a href="">상담예약</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
       <div>
@@ -71,16 +108,58 @@
             <span>우울감</span>
           </a>
         </li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>
+          <a href="">
+            <div>
+              <img src="./img/icon_diagnosis02.png" alt="" />
+            </div>
+            <span>불안장애</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div>
+              <img src="./img/icon_diagnosis02.png" alt="" />
+            </div>
+            <span>자살생각</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div>
+              <img src="./img/icon_diagnosis02.png" alt="" />
+            </div>
+            <span>니코틴 의존증</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div>
+              <img src="./img/icon_diagnosis02.png" alt="" />
+            </div>
+            <span>스마트폰 중독</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div>
+              <img src="./img/icon_diagnosis02.png" alt="" />
+            </div>
+            <span>인터넷 게임 중독</span>
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <div>
+              <img src="./img/icon_diagnosis02.png" alt="" />
+            </div>
+            <span>스트레스 유형</span>
+          </a>
+        </li>
       </ul>
     </article>
     <article class="articleB">
-      <div>
+       <div class="up">
         <div class="left">
           <div class="leftTop">
             <a href="">상담사례 <img src="./img/icon_arrow1.svg" alt="" /></a
@@ -148,7 +227,6 @@
               </a>
             </div></div>
           </div>
-        </div>
         <div class="right">
           <div class="rightTop">
               <p>information</p>
@@ -159,18 +237,34 @@
               <a href="">053)255-2962</a>
               <p>AM 9시 30분 - PM 7시 <br>
                 토, 일요일 & 공휴일 : 휴무</p>
-                <div>
+              <div>
                     <a href="">상담안내
                         <img id="arrow" src="./img/icon_blackArrow.png" alt="" />
                     </a>
                         <a href="">네이버 블로그 
-                            <img src="./img/naver.png" alt="">
+                            <img id="naver" src="./img/icon_naver.png" alt="">
                         </a>
                 </div>
           </div>
-        </div>
+        </div></div>
       </div>
     </article>
-    <footer></footer>
+    <footer>
+      <div>
+        <a href="">회사개요</a><a href="">개인정보처리방침</a><a href="">관리자</a>
+      </div>
+      <div>
+        <strong>심리상담센터 당신을듣다</strong>
+        <span>대표 문혜숙</span>
+        <span>제 1 센터 대구광역시 북구 검단로50, 복현서한타운 상가 301호</span>
+        <span>제 2 센터 대구 중구 태평로 160 대구스테이션센터 11층 1106호</span>
+        <p>
+        <span>사업자등록번호 728-81-01824</span><span>전화번호 053-255-2962</span><span>FAX 053-421-4337</span><span>이메일 moonvit@hanmail.net</span><span>개인정보보호책임자 문혜숙</span></p>
+      </div>
+      <div>Copyright(C)당신을듣다. All right reserved. Designed by KOWEB.</div>
+    </footer>
+    <div class="fixed">
+     <a class="menu" href="">MENU</a> 
+    </div>
   </body>
 </html>
