@@ -1,0 +1,28 @@
+* {
+  list-style: none;
+}
+header {
+  font-size: 24px;
+  color: blue;
+  ul {
+    display: flex;
+    justify-content: center;
+    li {
+      text-align: center;
+      &:nth-child(3) {
+        span {
+          color: red;
+        }
+      }
+      &:hover {
+        span {
+          font-size: 28px;
+        }
+      }
+      span {
+        font-weight: bold;
+        color: green;
+      }
+    }
+  }
+}

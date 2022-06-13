@@ -1,0 +1,43 @@
+header {
+  text-align: center;
+  .menu {
+    display: flex;
+    justify-content: center;
+    background-color: antiquewhite;
+    > li {
+      margin: 28px;
+      &:hover {
+        background-color: aqua;
+        .depth {
+          //   display: block;
+          height: 109px;
+        }
+      }
+      > a {
+        font-size: 28px;
+        padding: 14px 0;
+        display: inline-block;
+      }
+      .depth {
+        padding: 0;
+        // display: none;
+        height: 0;
+        overflow: hidden;
+        transition: 1s;
+        li {
+          //   border: 1px solid black;
+          &:hover {
+            background-color: aquamarine;
+          }
+          a {
+            padding: 7px 14px;
+            display: block;
+          }
+        }
+        li + li {
+          border-top: none;
+        }
+      }
+    }
+  }
+}

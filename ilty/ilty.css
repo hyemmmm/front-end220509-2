@@ -309,8 +309,27 @@ footer div:last-child {
   color: lightgray;
   margin: 28px 0;
 }
-.fixed .menu {
+.fixed {
   position: fixed;
   bottom: 280px;
   left: 140px;
+}
+.fixed .menu {
+  font-weight: bold;
+  display: block;
+}
+.fixed div {
+  display: block;
+  height: 2px;
+  width: 49px;
+  background-color: black;
+  margin: 14px 0;
+}
+.fixed div:nth-child(2) {
+  width: 40px;
+}
+.fixedRight {
+  position: fixed;
+  right: 28px;
+  bottom: 280px;
 }

@@ -166,8 +166,25 @@ async function getData(title) {
   let detail = await getSongDetail(id);
   return detail;
 }
+
+// let getData = async () => {} // 이렇게도 쓸 수 있음
+
 // console.log(getData("loco"));// 프로미스 자체를 반환
 // then을 써야 결과가 나옴
 getData("loco").then(function (result) {
   console.log(result);
+});
+
+// 데이터 받아오는 함수. 1초 => .then 올 출력
+
+let getProduct = new Promise(function (resolve, reject) {
+  setTimeout(function () {
+    resolve({ title: "iphone", version: 12 });
+  }, 1000);
+});
+
+let resultElem = document.querySelector(".result");
+
+getProduct.then((res) => {
+  resultElem.innerHTML = `<p>제품명 : ${res.title + res.version}</p>`;
 });

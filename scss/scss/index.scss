@@ -1,0 +1,47 @@
+$main_color: orange;
+$sub_color: yellow;
+
+$copy: $sub_color;
+.container {
+  height: 100px;
+  background-color: black;
+  header {
+    //가상클래스나 가상요소, 클래스 여부에 따라 쓸 수 있음
+    &::after {
+      content: "애프터";
+    }
+    margin: {
+      top: 100px;
+      left: 28px;
+    }
+    background-color: $main_color;
+    font : {
+      size: 30px-10px;
+    }
+    h1 {
+      font-size: 100px;
+      background: {
+        color: tomato;
+      }
+    }
+  }
+  a {
+    &:hover {
+      color: $copy;
+    }
+  }
+}
+
+@mixin box($w, $h) {
+  width: $w;
+  height: $h;
+  background-color: red;
+}
+
+nav {
+  .box {
+    @include box(100px, 200px);
+  }
+}
+
+@import url(../css/header.css);

@@ -208,3 +208,39 @@ svg {
 .none {
   display: none;
 }
+/*  */
+.slideContainer {
+  width: 400px;
+  height: 600px;
+  background-color: beige;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.slideContainer ul {
+  display: flex;
+  width: 300%;
+  height: 100%;
+  /* transform: translate(-400px); */
+  transition: 1s;
+}
+.slideContainer ul li {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slider .btns {
+  display: flex;
+  justify-content: center;
+}
+.slider .btns .btn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  color: white;
+  background-color: brown;
+  text-align: center;
+  line-height: 28px;
+  margin: 28px;
+  cursor: pointer;
+}

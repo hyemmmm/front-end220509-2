@@ -16,3 +16,16 @@ popButton.onclick = function () {
 };
 
 //.addEventListener('click', () => {})
+
+//slider
+let btnList = document.querySelectorAll(".slider .btns .btn");
+let sliderUl = document.querySelector(".slider .slideContainer ul");
+// btnList.addEventListener("click", function (e) {
+//   sliderUl.style.transform = "translate(0px)";
+// });
+
+btnList.forEach(function (item, idx) {
+  item.addEventListener("click", function (e) {
+    sliderUl.style.transform = `translate(${idx * -400}px)`;
+  });
+});

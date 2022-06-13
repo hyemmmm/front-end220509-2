@@ -1,0 +1,48 @@
+header {
+  text-align: center;
+}
+
+header .menu {
+  display: flex;
+  justify-content: center;
+  background-color: antiquewhite;
+}
+
+header .menu > li {
+  margin: 28px;
+}
+
+header .menu > li:hover {
+  background-color: aqua;
+}
+
+header .menu > li:hover .depth {
+  height: 109px;
+}
+
+header .menu > li > a {
+  font-size: 28px;
+  padding: 14px 0;
+  display: inline-block;
+}
+
+header .menu > li .depth {
+  padding: 0;
+  height: 0;
+  overflow: hidden;
+  transition: 1s;
+}
+
+header .menu > li .depth li:hover {
+  background-color: aquamarine;
+}
+
+header .menu > li .depth li a {
+  padding: 7px 14px;
+  display: block;
+}
+
+header .menu > li .depth li + li {
+  border-top: none;
+}
+/*# sourceMappingURL=header.css.map */

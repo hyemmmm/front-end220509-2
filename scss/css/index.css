@@ -1,0 +1,25 @@
+@charset "UTF-8";
+.container {
+  height: 100px;
+  background-color: black;
+}
+
+.container header {
+  margin-top: 100px;
+  margin-left: 28px;
+  background-color: orange;
+}
+
+.container header::after {
+  content: "애프터";
+}
+
+.container header h1 {
+  font-size: 100px;
+  background-color: tomato;
+}
+
+.container a.hover {
+  color: red;
+}
+/*# sourceMappingURL=index.css.map */

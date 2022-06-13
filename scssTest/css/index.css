@@ -1,0 +1,31 @@
+* {
+  list-style: none;
+}
+
+header {
+  font-size: 24px;
+  color: blue;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+}
+
+header ul li {
+  text-align: center;
+}
+
+header ul li:nth-child(3) span {
+  color: red;
+}
+
+header ul li:hover span {
+  font-size: 28px;
+}
+
+header ul li span {
+  font-weight: bold;
+  color: green;
+}
+/*# sourceMappingURL=index.css.map */
